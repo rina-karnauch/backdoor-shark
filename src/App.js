@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import ShrekBox from "./components/ShrekBox";
+import Info from "./components/Info";
+import Box from '@mui/material/Box';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    return (
+        <Box
+            sx={{
+                display: 'flex',
+                flexDirection: 'column-reverse',
+                alignItems: 'center',
+                justifyContent: 'center',
+                height:'100vh',
+                p: 1,
+                m: 1,
+                bgcolor: 'white',
+            }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+            <ShrekBox/>
+            <Info/>
+        </Box>
+    );
 }
 
 export default App;
